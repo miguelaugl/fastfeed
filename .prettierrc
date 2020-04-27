@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "endOfLine": "auto",
+  "linebreak-style": ["error", "windows"],
+  "arrowParens": "avoid",
+}
