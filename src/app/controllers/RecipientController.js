@@ -59,6 +59,14 @@ class RecipientController {
 
     return res.json(newRecipient);
   }
+
+  async destroy(req, res) {
+    const { id } = req.params;
+
+    await Recipient.destroy({ where: { id } });
+
+    return res.status(204).send();
+  }
 }
 
 export default new RecipientController();
