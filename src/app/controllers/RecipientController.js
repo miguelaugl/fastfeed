@@ -9,6 +9,14 @@ class RecipientController {
     return res.json(recipients);
   }
 
+  async show(req, res) {
+    const { id } = req.params;
+
+    const recipient = await Recipient.findOne({ where: { id } });
+
+    return res.json(recipient);
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
